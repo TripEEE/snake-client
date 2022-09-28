@@ -6,9 +6,15 @@ const connect = function () {
     port: 50541
   });
 
-  conn.on("data", (data) => {
+  conn.on("connect", () => {
+    console.log("You are connected! Ready to play Snake?")
+    conn.write("Name: YUM")
+  })
+
+  conn.on("data", () => {
     console.log("You just got kicked for idling!")
   })
+
 
   // interpret incoming data as text
   conn.setEncoding("utf8");

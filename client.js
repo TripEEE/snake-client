@@ -11,6 +11,13 @@ const connect = function () {
     conn.write("Name: YUM")
   })
 
+  // conn.on("connect", () => {
+  //   conn.write("Move: up")
+  //   setInterval(() => {
+  //     conn.write("Move: up")
+  //   }, 100)
+  // })
+
   conn.on("data", () => {
     console.log("You just got kicked for idling!")
   })

@@ -10,6 +10,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("You are connected! Ready to play Snake?")
     conn.write("Name: YUM")
+    conn.write("Say: Hello there")
   })
 
   // conn.on("connect", () => {
